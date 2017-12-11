@@ -33,12 +33,12 @@ def prepareFrmgham2():
     
     names = list(X)
 
-    for i1 in range(len(names)):
-        for i2 in range(i1,len(names)):
-            n1 = names[i1]
-            n2 = names[i2]
-            print n1,n2
-            X[n1+'x'+n2] = X[n1] * X[n2]
+    #for i1 in range(len(names)):
+    #    for i2 in range(i1,len(names)):
+    #        n1 = names[i1]
+    #        n2 = names[i2]
+    #        print n1,n2
+    #        X[n1+'x'+n2] = X[n1] * X[n2]
     
     names = list(X)
 
@@ -336,7 +336,7 @@ def getMeansStds(errors):
         #m = sum(means)/len(means)
         all_means.append(m)
         #std = sqrt(np.sum(np.dot(means-m,np.transpose(means-m)))/(N-1))/(sqrt(len(means)-1))
-        std = np.std(means)/(sqrt(N))
+        std = np.std(means)/(sqrt(len(i)))
         all_stds.append(std)
     return (all_means,all_stds)
 
@@ -378,15 +378,15 @@ def makeLinearFit(Xtrain,Ytrain,Xpred,Ypred):
 
 print(makeLinearFit(trainX,trainY,testX,testY))
 
-#best_subset(trainX,trainY,makeplot=False)
-#lasso(scale(trainX),scale(trainY),makeplot=False)
-#pcr(scale(trainX),scale(trainY),makeplot=False)
+#best_subset(trainX,trainY,makeplot=True)
+#lasso(scale(trainX),scale(trainY),makeplot=True)
+#pcr(scale(trainX),scale(trainY),makeplot=True)
 
-#xs, errors = best_subsetCV()
-#means,stds = getMeansStds(errors)
-#plotEstimatedError(xs, means, stds,"Antall faktorer i delmengden","best_subset_CV")
-#(_,(k,_)) = oneStandardError(xs,means,stds)
-#print best_subsetTest(trainX,trainY,testX,testY,k)
+xs, errors = best_subsetCV()
+means,stds = getMeansStds(errors)
+plotEstimatedError(xs, means, stds,"Antall faktorer i delmengden","best_subset_CV")
+(_,(k,_)) = oneStandardError(xs,means,stds)
+print best_subsetTest(trainX,trainY,testX,testY,k)
 
 xs, errors = pcrCV()
 means,stds = getMeansStds(errors)

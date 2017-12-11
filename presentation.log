@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/NixOS.org) (preloaded format=pdflatex 2017.12.10)  11 DEC 2017 15:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (TeX Live 2016/NixOS.org) (preloaded format=pdflatex 2017.12.10)  11 DEC 2017 22:33
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1501,14 +1501,14 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 
 {/nix/store/15fa5b26y5c02y05mln6iql76i990l31-texlive-combined-2016/share/texmf/
 fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+cmss on input line 49.
+LaTeX Font Info:    Try loading font information for OMS+cmss on input line 50.
 
-LaTeX Font Info:    No file OMScmss.fd. on input line 49.
+LaTeX Font Info:    No file OMScmss.fd. on input line 50.
 
 
 LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 (Font)              using `OMS/cmsy/m/n' instead
-(Font)              for symbol `textbullet' on input line 49.
+(Font)              for symbol `textbullet' on input line 50.
 
 [2
 
@@ -1522,21 +1522,21 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 
 ] [7
 
+] [8
+
 ]
-LaTeX Font Info:    Try loading font information for U+msa on input line 68.
+LaTeX Font Info:    Try loading font information for U+msa on input line 69.
 
 (/nix/store/15fa5b26y5c02y05mln6iql76i990l31-texlive-combined-2016/share/texmf/
 tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 68.
+LaTeX Font Info:    Try loading font information for U+msb on input line 69.
 
 (/nix/store/15fa5b26y5c02y05mln6iql76i990l31-texlive-combined-2016/share/texmf/
 tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) [8
-
-] [9
+) [9
 
 ] [10
 
@@ -1560,7 +1560,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] <best_subset.png, id=116, 462.528pt x 346.896pt>
 File: best_subset.png Graphic file (type png)
  <use best_subset.png>
-Package pdftex.def Info: best_subset.png used on input line 111.
+Package pdftex.def Info: best_subset.png used on input line 109.
 (pdftex.def)             Requested size: 243.3672pt x 182.52722pt.
 
 [19
@@ -1571,7 +1571,7 @@ Package pdftex.def Info: best_subset.png used on input line 111.
 File: lasso.png Graphic file (type png)
 
 <use lasso.png>
-Package pdftex.def Info: lasso.png used on input line 131.
+Package pdftex.def Info: lasso.png used on input line 129.
 (pdftex.def)             Requested size: 243.3672pt x 182.52722pt.
  [21
 
@@ -1585,7 +1585,7 @@ Package pdftex.def Info: lasso.png used on input line 131.
 <pcr.png, id=153, 462.528pt x 346.896pt>
 File: pcr.png Graphic file (type png)
  <use pcr.png>
-Package pdftex.def Info: pcr.png used on input line 160.
+Package pdftex.def Info: pcr.png used on input line 158.
 (pdftex.def)             Requested size: 243.3672pt x 182.52722pt.
  [25
 
@@ -1610,7 +1610,7 @@ Package pdftex.def Info: pcr.png used on input line 160.
 <best_subset_CV.png, id=203, 462.528pt x 346.896pt>
 File: best_subset_CV.png Graphic file (type png)
  <use best_subset_CV.png>
-Package pdftex.def Info: best_subset_CV.png used on input line 187.
+Package pdftex.def Info: best_subset_CV.png used on input line 185.
 (pdftex.def)             Requested size: 243.3672pt x 182.52722pt.
 
 [34
@@ -1619,7 +1619,7 @@ Package pdftex.def Info: best_subset_CV.png used on input line 187.
 File: lasso_CV.png Graphic file (type png)
 
 <use lasso_CV.png>
-Package pdftex.def Info: lasso_CV.png used on input line 194.
+Package pdftex.def Info: lasso_CV.png used on input line 192.
 (pdftex.def)             Requested size: 243.3672pt x 182.52722pt.
  [35
 
@@ -1627,7 +1627,7 @@ Package pdftex.def Info: lasso_CV.png used on input line 194.
 <pcr_CV.png, id=217, 462.528pt x 346.896pt>
 File: pcr_CV.png Graphic file (type png)
  <use pcr_CV.png>
-Package pdftex.def Info: pcr_CV.png used on input line 201.
+Package pdftex.def Info: pcr_CV.png used on input line 199.
 (pdftex.def)             Requested size: 243.3672pt x 182.52722pt.
  [36
 
@@ -1643,7 +1643,7 @@ Package pdftex.def Info: pcr_CV.png used on input line 201.
 File: lasso_CV2.png Graphic file (type png)
 
 <use lasso_CV2.png>
-Package pdftex.def Info: lasso_CV2.png used on input line 237.
+Package pdftex.def Info: lasso_CV2.png used on input line 235.
 (pdftex.def)             Requested size: 243.3672pt x 182.52722pt.
  [41
 
@@ -1651,7 +1651,7 @@ Package pdftex.def Info: lasso_CV2.png used on input line 237.
 <pcr_CV2.png, id=252, 462.528pt x 346.896pt>
 File: pcr_CV2.png Graphic file (type png)
  <use pcr_CV2.png>
-Package pdftex.def Info: pcr_CV2.png used on input line 244.
+Package pdftex.def Info: pcr_CV2.png used on input line 242.
 (pdftex.def)             Requested size: 243.3672pt x 182.52722pt.
  [42
 
@@ -1667,11 +1667,11 @@ Package pdftex.def Info: pcr_CV2.png used on input line 244.
 \tf@snm=\write8
 \openout8 = `presentation.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 260.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 260.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 257.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 257.
  (./presentation.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 260.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 260.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 257.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 257.
 Package rerunfilecheck Info: File `presentation.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
 
@@ -1682,12 +1682,12 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 260.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 257.
  ) 
 Here is how much of TeX's memory you used:
  22035 strings out of 494447
  448893 string characters out of 6160280
- 509234 words of memory out of 5000000
+ 508234 words of memory out of 5000000
  24783 multiletter control sequences out of 15000+600000
  12340 words of font info for 45 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -1708,7 +1708,7 @@ d-2016/share/texmf/fonts/type1/public/amsfonts/cm/cmssi8.pfb></nix/store/15fa5b
 mbined-2016/share/texmf/fonts/type1/public/amsfonts/cm/cmsy6.pfb></nix/store/15
 fa5b26y5c02y05mln6iql76i990l31-texlive-combined-2016/share/texmf/fonts/type1/pu
 blic/amsfonts/cm/cmsy8.pfb>
-Output written on presentation.pdf (43 pages, 293080 bytes).
+Output written on presentation.pdf (43 pages, 318989 bytes).
 PDF statistics:
  321 PDF objects out of 1000 (max. 8388607)
  240 compressed objects within 3 object streams

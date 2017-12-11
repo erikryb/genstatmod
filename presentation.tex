@@ -34,10 +34,11 @@
 
   To mulige problemstillinger:
   \begin{enumerate}
-    \item Hvilke faktorer påvirker blodtrykket?
+    \item Hvilke prediktorer påvirker blodtrykket?
     \pause
     \item Kan vi forutsi hvor lenge en pasient har igjen å leve basert på dataene som ble gjort i første sjekk?
   \end{enumerate}
+  \pause
   Detaljer om analysen:
   \begin{enumerate}
     \item Kun pasientene fra den første sjekken ble brukt i analysen
@@ -63,14 +64,14 @@
     \item \(\epsilon\) er en normalfordelt variabel med forventningsverdi 0
   \end{itemize}
   \pause
-  I vårt tilfelle er \(Y\) blodtrykket, mens \(X\) består av faktorene kjønn (mann/kvinne), alder,
+  I vårt tilfelle er \(Y\) blodtrykket, mens \(X\) består av prediktorene kjønn (mann/kvinne), alder,
   antall sigaretter røyket per dag, BMI, glukosenivå, utdanningsnivå og kolesterolnivå.
 \end{frame}
 
 \begin{frame}
   \frametitle{Minstre kvadraters metode}
 
-  Vi har en \(n\times p\)-matrise \(\textbf{X}\) bestående av n observasjoner av p faktorer, og en \(n\times 1\)-matrise \(\textbf{Y}\) bestående av de korresponderene responsvariablene. Vi vil fra nå av anta at de observerte faktorene og responsene er normalisert til å ha gjennomsnitt 0 og varians 1.
+  Vi har en \(n\times p\)-matrise \(\textbf{X}\) bestående av n observasjoner av p prediktorer, og en \(n\times 1\)-matrise \(\textbf{Y}\) bestående av de korresponderene responsvariablene. Vi vil fra nå av anta at de observerte prediktorene og responsene er normalisert til å ha gjennomsnitt 0 og varians 1.
 
   \pause
 
@@ -79,19 +80,16 @@
   \begin{equation}
     (\textbf{Y} - \textbf{X}\beta)(\textbf{Y} - \textbf{X}\beta)^T
   \end{equation}
-
-  \pause
-  Bruker alle faktorene, og kan føre til overfitting, og dermed dårligere prediksjon.
 \end{frame}
 
 \begin{frame}
-  \frametitle{Tre forbedringer av minstre kvadraters metode}
+  \frametitle{Tre modifiseringer av minste kvadraters metode}
   \begin{itemize}
-    \item Beste delmengde-utvalg velger ut en delmengde av faktorene og utfører minstre kvadrater på denne.
+    \item Beste delmengde-utvalg velger ut en delmengde av prediktorene og utfører minstre kvadrater på denne.
     \pause
   \item Lasso-regresjon krymper absoluttverdien til koeffisientene \(\beta\).
     \pause
-    \item Prinsipalkomponent-regresjon projiserer først faktorene til et lavere-dimensjonalt underrom og utfører deretter minstre kvadrater.
+    \item Prinsipalkomponent-regresjon projiserer først prediktorene til et lavere-dimensjonalt underrom og utfører deretter minstre kvadrater.
   \end{itemize}
 \end{frame}
 
@@ -203,28 +201,28 @@
 \begin{frame}
   \frametitle{Resultater}
   \begin{tabular}{ l r r r r}
-    Faktor & Minste kvadrater & Beste delmengde & Lasso & PCR \\
+    Prediktor & Minste kvadrater & Beste delmengde & Lasso & PCR \\
     \hline
-    Kjønn & 0.070 & 0.070 & 0.052 & 0.071 \\
-    Alder & 0.317 & 0.323 & 0.309 & 0.317 \\
-    Sigaretter per dag & 0.002 & & & 0.002 \\
-    BMI & 0.259 & 0.264 & 0.259 & 0.246 \\
-    Diabetiker & 0.010 & & 4.085 & 0.032 \\
-    Glukose-nivå & 0.059 & 0.066 & 0.051 & 0.037 \\
-    Utdanningsnivå & -0.034 & & -0.021 & -0.035 \\
-    Kolesterol-nivå & 0.099 & 0.097 & 0.087 & 0.100 \\
+    Kjønn & 0.070 & & & 0.008 \\
+    Alder & 0.317 & 0.356 & 0.271 & 0.214 \\
+    Sigaretter per dag & 0.002 & & & -0.080 \\
+    BMI & 0.259 & & 0.196 & 0.171 \\
+    Diabetiker & 0.010 & & & 0.040 \\
+    Glukose-nivå & 0.059 & & & 0.047 \\
+    Utdanningsnivå & -0.034 & & & -0.148 \\
+    Kolesterol-nivå & 0.099 & & 0.043 & 0.176 \\
     \hline
-    Test Error & 0.723 & 0.721 & 0.720 & 0.723 \\
-    Std Error & 0.039 & 0.039 & 0.039 & 0.039 \\
+    Test Error & 0.723 & 0.720 & 0.733 & 0.776 \\
+    Std Error & 0.039 & 0.039 & 0.040 & 0.041 \\
   \end{tabular}
 \end{frame}
 
 \begin{frame}
   \frametitle{Utvidelse av metodene}
 
-  Jeg dannet nye faktorer ved å ta alle mulige produkter av de originale: \[X_1 \cdot X_1, X_1 \cdot X_2, \dots.\]
+  Jeg dannet nye prediktorer ved å ta alle mulige produkter av de originale: \[X_1 \cdot X_1, X_1 \cdot X_2, \dots.\]
   \pause
-  Disse faktorene ble brukt til å danne en ny matrise \(\textbf{X}\) bestående av både de originale og de nye faktorene, tilsammen 44 faktorer.
+  Disse prediktorene ble brukt til å danne en ny matrise \(\textbf{X}\) bestående av både de originale og de nye prediktorene, tilsammen 44 prediktorer.
   \pause
   Jeg utførte så Lasso-regresjon og PCR på denne nye matrisen.
 \end{frame}
@@ -249,12 +247,11 @@
   \begin{tabular}{ l r r}
      & Lasso & PCR \\
     \hline
-    Test Error & 0.703 & 0.720 \\
-    Std Error & 0.038 & 0.039
+    Test Error & 0.716 & 0.773 \\
+    Std Error & 0.039 & 0.039
   \end{tabular}
   \end{center}
-
-  Vi ser at Lasso-regresjon ble forbedret fra 0.720 til 0.703.
+  Vi ser at test-erroren fra lasso-regresjonen ble forbedret fra 0.733 til 0.716.
 \end{frame}
 
 \end{document}
