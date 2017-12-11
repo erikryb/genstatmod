@@ -13,6 +13,7 @@ in
     name = "genstatmod";
     version = "1";
     buildInputs = [
+      biber
       gtk3
       python
       pythonPackages.cvxopt
@@ -23,6 +24,10 @@ in
       pythonPackages.scipy
       pythonPackages.statsmodels
       pythonPackages.pygobject3
+      (texlive.combine {
+        inherit (texlive) collection-fontsrecommended scheme-small latexmk geometry moreverb biblatex logreq xstring svg was preprint tikzmark import pgfopts texcount beamertheme-metropolis;
+      })
+
   # ---
     ];
   }
