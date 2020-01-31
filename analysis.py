@@ -40,9 +40,12 @@ def prepareFrmgham2():
     #        print n1,n2
     #        X[n1+'x'+n2] = X[n1] * X[n2]
     
+    #for n in names:
+    #    X['sqrt (' + n + ')'] = np.sqrt(X[n])
+    
     names = list(X)
 
-    y = dataset.ix[:,'SYSBP']
+    y = dataset.ix[:,'DIABP']
     print X
 
     print X.ix[:5,:]

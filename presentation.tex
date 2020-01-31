@@ -78,7 +78,7 @@
   Minstre kvadraters metode estimerer koeffisientene \(\beta\) ved å minimere RSS (residual sum of squares):
 
   \begin{equation}
-    (\textbf{Y} - \textbf{X}\beta)(\textbf{Y} - \textbf{X}\beta)^T
+    (\textbf{Y} - \textbf{X}\beta)^T (\textbf{Y} - \textbf{X}\beta)
   \end{equation}
 \end{frame}
 
@@ -98,7 +98,7 @@
   Gitt en delmengde \(S \subset \{1,\dots,p\}\) kan vi danne matrisen \(\textbf{X}_S = (\textbf{X}_{i_1}|\textbf{X}_{i_2}|\dots |\textbf{X}_{i_k})_{i_* \in S}\).
   Vi kan så utføre minst kvadrater på \(\textbf{X}_S\).
   \pause
-  For en gitt \(0 \leq k \leq p\) utfører vi minste kvadrater på den delmengden \(S\) med \(|S| = k\) som gir lavest RSS.
+  For en gitt \(0 \leq k \leq p\) utfører vi minste kvadrater på den \(\textbf{X}_S\) med \(|S| = k\) som gir lavest RSS.
 \end{frame}
 
 \begin{frame}
@@ -114,9 +114,12 @@
   \begin{equation}
     (\textbf{Y} - \textbf{X}\beta)(\textbf{Y} - \textbf{X}\beta)^T + \lambda \sum_{i=1}^p |\beta_i|
   \end{equation}
-  der \(\lambda\) er en parameter som bestemmer hvor mye store koeffisienter skal straffes. Dette er ekvivalent med å minimere uttrykket
+  der \(\lambda\) er en parameter som bestemmer hvor mye koeffisientene skal krympes.
+  
+  \pause
+  Dette er ekvivalent med å minimere uttrykket
   \begin{equation}
-    (\textbf{Y} - \textbf{X}\beta)(\textbf{Y} - \textbf{X}\beta)^T
+    (\textbf{Y} - \textbf{X}\beta)^T (\textbf{Y} - \textbf{X}\beta)
   \end{equation}
   der vi krever at \(\sum_{i=1}^p |\beta_i| \leq t\).
 \end{frame}
@@ -140,7 +143,7 @@
 
   \pause
 
-  Vi danner matrisa \(\textbf{Z} = \textbf{X}\textbf{V}\). Kolonnene i denne matrisa kalles \emph{prinsipalkomponentene} til \textbf{X}. Den \(n\)-te prinsipalkomponenten har maksimal varians gitt at den skal være ortogonal til de forrige \(n-1\) prinsipalkomponentene. 
+  Vi danner matrisa \(\textbf{Z} = \textbf{X}\textbf{V}\). Kolonnene i denne matrisa kalles \emph{prinsipalkomponentene} til \textbf{X}.
 
 \end{frame}
 
@@ -171,9 +174,9 @@
     \pause
     \item Dette ble gjentatt for hver gruppe.
     \pause
-    \item Gjennomsnittet av RSS ble beregnet for hver gruppe.
+    \item Vi estimerte prediksjonserroren og standard-erroren til denne estimatoren.
     \pause
-    \item Jeg valgte den parameteren med lavest gjennomsnittlig RSS.
+    \item Jeg bestemte parameteren ved å bruke \emph{én standard-error}-regelen.
   \end{itemize}
 \end{frame}
 
@@ -206,7 +209,7 @@
     Kjønn & 0.070 & & & 0.008 \\
     Alder & 0.317 & 0.356 & 0.271 & 0.214 \\
     Sigaretter per dag & 0.002 & & & -0.080 \\
-    BMI & 0.259 & & 0.196 & 0.171 \\
+    BMI & 0.259 & 0.275 & 0.196 & 0.171 \\
     Diabetiker & 0.010 & & & 0.040 \\
     Glukose-nivå & 0.059 & & & 0.047 \\
     Utdanningsnivå & -0.034 & & & -0.148 \\
